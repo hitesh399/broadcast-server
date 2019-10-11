@@ -22,11 +22,11 @@ async function createServer () {
 
     // console.log('process.env', process.env)
 
-    // require('dotenv').config(
-    //     {
-    //         path: __dirname+'/.env'
-    //     }
-    // );
+    require('dotenv').config(
+        {
+            path: __dirname+'/.env'
+        }
+    );
 
     var channels = process.env.channels ? process.env.channels.split(',') : [];
 
@@ -86,7 +86,7 @@ async function createServer () {
 			  res.writeHead(405, headers);
 			  res.end(`${req.method} is not allowed for the request.`);
 
-		}).listen(process.env.NODE_PORT);
+		}).listen(process.env.PORT);
 
 	 }
 	 else {
@@ -115,7 +115,7 @@ async function createServer () {
 			  res.writeHead(405, headers);
 			  res.end(`${req.method} is not allowed for the request.`);
 
-		}).listen(process.env.NODE_PORT);
+		}).listen(process.env.PORT);
 	}
 
 	var io = require('socket.io')(app);
