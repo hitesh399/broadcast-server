@@ -20,11 +20,13 @@ async function createServer () {
     //     }
     // );
 
-    require('dotenv').config(
-        {
-            path: __dirname+'/.env'
-        }
-    );
+    // console.log('process.env', process.env)
+
+    // require('dotenv').config(
+    //     {
+    //         path: __dirname+'/.env'
+    //     }
+    // );
 
     var channels = process.env.channels ? process.env.channels.split(',') : [];
 
