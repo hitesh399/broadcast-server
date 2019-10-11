@@ -12,7 +12,7 @@ const util = require('util');
 const readFile = util.promisify(fs.readFile);
 
 async function createServer () {
-
+	console.log('Test sdhgsdf',  process.env)
 	// const dotenv_filename = await readFile(__dirname+'/../.env', 'utf8');
     // require('dotenv').config(
     //     {
