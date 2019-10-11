@@ -12,7 +12,7 @@ const util = require('util');
 const readFile = util.promisify(fs.readFile);
 
 async function createServer () {
-	console.log('Test sdhgsdf',  process.env)
+	// console.log('Test sdhgsdf',  process.env)
 	// const dotenv_filename = await readFile(__dirname+'/../.env', 'utf8');
     // require('dotenv').config(
     //     {
@@ -37,6 +37,8 @@ async function createServer () {
     if (process.env.REDIS_PASSWORD) {
     	redis_credentials.password = process.env.REDIS_PASSWORD
     }
+
+    console.log('redis_credentials',  redis_credentials)
 	var redis = require('redis').createClient(redis_credentials);
 	var redisCli =   require('redis').createClient(redis_credentials);
 
