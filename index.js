@@ -193,7 +193,7 @@ async function toBroadcast(io, channel, data, redis) {
             console.log('get Socket ID ', socket_ids, user_id)
 			socket_ids.map(function (si) {
                 console.log('Testsydghsfdhsfdhgdf', socket_ids, `${channel}.${data.event}`)
-				io.to(`${si}`).emit(`${channel}.${data.event}`, data.message);
+				io.to(`${si}`).emit(`${channel}.${data.event}`, data.data);
 			})
 		})
 	}
